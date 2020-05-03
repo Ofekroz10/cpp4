@@ -98,6 +98,9 @@ RealVariable& solver::operator*(RealVariable& y, double x){
     return y * temp;
 }
 RealVariable& solver::operator/(RealVariable& x,double y){
+    if (y == 0)
+        throw invalid_argument("");
+    
     RealVariable temp = RealVariable(0, 0, 1 / y);
     return x * temp;
 
