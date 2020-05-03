@@ -22,7 +22,7 @@ double solver::solve(RealVariable& x){
             double sqrtD = sqrt(d);
             solution = (-x.b);
             solution += sqrtD;
-            solution = solution / 2 * x.a;
+            solution = solution / (2 * x.a);
         }
 
         return solution;
