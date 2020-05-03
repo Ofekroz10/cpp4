@@ -7,6 +7,9 @@ using namespace solver;
 
 double solver::solve(RealVariable& x){
 
+    if (x.a == 0 && x.b == 0)
+        throw invalid_argument("");
+    
     if (x.a != 0)
     {
         double d = (x.b * x.b) + (-4 * x.a * x.c);
