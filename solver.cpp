@@ -144,7 +144,7 @@ RealVariable& solver::operator-(RealVariable& x,RealVariable& y){
         
 RealVariable& solver::operator^(RealVariable& x, double y){
     
-    if (y >= 2 || y < 0)
+    if (y > 2 || y < 0)
         throw invalid_argument("");
     RealVariable* temp = new RealVariable(x);
         if (y == 0)
